@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - LearnSphere</title>
+    <style>
+        :root {
+            --primary: #5d5fef;
+            --bg: #f8faff;
+            --text-dark: #2d3436;
+        }
+        body {
+            font-family: 'Inter', 'Segoe UI', sans-serif;
+            margin:0;
+            background-color: var(--bg);
+            color: var(--text-dark);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .login-section {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            padding: 40px 30px;
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+        }
+        .login-section h2 {
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+        .login-section input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-sizing: border-box;
+        }
+        .login-btn {
+            background: linear-gradient(135deg, #5d5fef, #3b3fd9);
+            color: white;
+            padding: 12px 32px;
+            border: none;
+            border-radius: 25px;
+            font-size: 1rem;
+            cursor: pointer;
+            width: 100%;
+            transition: transform 0.2s;
+        }
+        .login-btn:hover {
+            transform: scale(1.03);
+        }
+    </style>
+</head>
+<body>
+    <div class="login-section">
+        <h2>Login to LearnSphere</h2>
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="password" placeholder="Password">
+        <button class="login-btn" onclick="performLogin()">Login</button>
+    </div>
+
+    <script>
+        function performLogin() {
+            // stub validation - in real app call backend
+            const user = document.getElementById('username').value;
+            const pass = document.getElementById('password').value;
+            if(user && pass) {
+                window.location.href = 'manu.html';
+            } else {
+                alert('Please enter username and password');
+            }
+        }
+    </script>
+</body>
+</html>
