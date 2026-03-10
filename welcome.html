@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to LearnSphere</title>
+    <style>
+        :root {
+            --primary: #5d5fef;
+            --bg: #f8faff;
+            --text-light: #636e72;
+        }
+        body {
+            font-family: 'Inter', 'Segoe UI', sans-serif;
+            margin:0;
+            background-color: var(--bg);
+            color: var(--text-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .welcome-section {
+            text-align: center;
+            max-width: 700px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            padding: 40px 20px;
+        }
+        .welcome-section h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+            font-weight: bold;
+        }
+        .welcome-section p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: var(--text-light);
+        }
+        .start-btn {
+            background: linear-gradient(135deg, #5d5fef, #3b3fd9);
+            color: white;
+            padding: 12px 32px;
+            border: none;
+            border-radius: 25px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        .start-btn:hover {
+            transform: scale(1.05);
+        }
+        .feature-icons { display: flex; justify-content: center; gap: 30px; margin-top: 20px; flex-wrap: wrap; }
+        .feature-icons div { text-align: center; font-size: 1rem; color: var(--text-light); }
+        .feature-icons div .icon { font-size: 2rem; display: block; margin-bottom: 5px; }
+        @media (max-width: 600px) {
+            .welcome-section { padding: 30px 15px; }
+            .feature-icons { gap: 15px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="welcome-section">
+        <h1>Welcome to LearnSphere</h1>
+        <p>Your AI-powered platform for mastering Machine Learning. Get explanations, coding labs, and visual tools all in one place.</p>
+        <button class="start-btn" onclick="location.href='login.html'">Start Learning</button>
+        <div class="feature-icons">
+            <div><span class="icon">🤖</span>AI Tutor</div>
+            <div><span class="icon">💻</span>Coding Labs</div>
+            <div><span class="icon">🎨</span>Visual Learning</div>
+        </div>
+    </div>
+</body>
+</html>
